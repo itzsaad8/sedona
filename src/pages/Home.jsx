@@ -6,6 +6,7 @@ import { SiAntdesign } from "react-icons/si";
 import { MdOutlineConstruction } from "react-icons/md";
 import img1 from '../assets/1.jpg'
 import Recentwork from '../components/Recentwork';
+import Testimonial from '../components/Testimonial';
 
 const Home = () => {
   return (
@@ -61,6 +62,7 @@ const Home = () => {
        </div>
 
            <Recentwork/>
+           <Testimonial/>
     </div>
   )
 }
