@@ -12,7 +12,7 @@ import Footer from '../components/Footer';
 
 const Home = () => {
   return (
-    <div className='mx-[30px]'>
+    <div className='sm:mx-[30px]'>
         <Navbar/>
       
 
@@ -25,8 +25,8 @@ const Home = () => {
         </div>
         <div>
             <div className='absolute top-[23%] left-[13%] text-white '>
-                <h1 className='text-7xl font-semibold'>Modern Living Room</h1>
-                <p className='text-2xl w-[60%] my-8'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, consequuntur sed, laudantium .</p>
+                <h1 className='text-3xl sm:text-7xl font-semibold'>Modern Living Room</h1>
+                <p className='text-2xl sm:w-[60%] my-8'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, consequuntur sed, laudantium .</p>
                 <button className='text-lg font-[500] text-black bg-yellow-500  py-3 px-10'>View Project</button>
             </div>
 
@@ -35,13 +35,13 @@ const Home = () => {
        </div>
        {/* .................................. */}
 
-       <div className='mx-[14%] flex py-28 gap-6'>
-           <div className='w-[60%] flex flex-col  justify-center'>
-              <h1 className='text-5xl w-1/2 font-semibold mt-2'>25 years of Experience</h1>
+       <div className='sm:mx-[14%] mx-4 sm:flex py-28 gap-6'>
+           <div className='sm:w-[60%] flex flex-col  justify-center'>
+              <h1 className='text-2xl sm:text-5xl sm:w-1/2 font-semibold mt-2'>25 years of Experience</h1>
               <p className='my-8 text-gray-500'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
                  </p>
                  <p className='mt-[5px] text-gray-500'>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conse quuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
-                 <div className='flex gap-[120px] pt-14 text-gray-500'>
+                 <div className='sm:flex pl-2 sm:pl-0 gap-[120px] pt-14 text-gray-500'>
                       <div className=''>
                         <SiInternetarchive className='text-6xl mb-2'/>
                         <p>Architecture</p>
@@ -57,7 +57,7 @@ const Home = () => {
                     
                  </div>
            </div>
-           <div className='w-[40%]'>
+           <div className='sm:w-[40%] py-5 sm:py-0'>
             <img src={img1} alt="" />
                
            </div>

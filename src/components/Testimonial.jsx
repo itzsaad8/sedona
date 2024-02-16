@@ -35,16 +35,16 @@ const Testimonial = () => {
   return (
     <div className='my-8'>
     <div className='bg-slate-800 text-white mt-8'>
-        <div className='p-28 text-center'>
+        <div className='sm:p-28 p-5 text-center'>
         <div><h3 className='text-orange-300 py-3'>TESTIMONIALS</h3></div>
-        <div><h1 className='text-4xl font-semibold'>What clients say about us</h1></div>
+        <div><h1 className='sm:text-4xl text-2xl font-semibold'>What clients say about us</h1></div>
         <div><p className='text-8xl py-4'>“</p></div>
         <div className='w-[93%]  mx-auto relative'>
             <div className='w-[89%] mx-auto'>
-                <p className='font-[400] text-2xl text-gray-500'>{clients[current].msg} </p>
+                <p className='font-[400] sm:text-2xl text-gray-500'>{clients[current].msg} </p>
                 <p className='py-6'>{clients[current].author}<span className='text-orange-300'> {clients[current].authnick}</span></p>
             </div>
-            <div className='w-[93%] ml-10 flex justify-between  absolute top-0 text-4xl'>
+            <div className='sm:w-[93%] w-[100%] sm:ml-10 flex justify-between   absolute sm:top-0 top-5 text-4xl'>
 
             <button className='' onClick={handleprev}><GrFormPrevious/></button>
             <button className='' onClick={handlenext}><GrFormNext/></button>
@@ -56,7 +56,7 @@ const Testimonial = () => {
 
     </div>
     <div className='bg-gray-100 py-9 '>
-        <ul className='flex justify-around w-[70%] mx-auto '>
+        <ul className='sm:flex justify-around  w-[70%] mx-28 sm:mx-auto  '>
             <li><img src={img1} alt="" /></li>
             <li><img src={img2} alt="" /></li>
             <li><img src={img3} alt="" /></li>

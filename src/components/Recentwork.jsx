@@ -9,12 +9,12 @@ const Recentwork = () => {
     const [show2,setShow2]=useState(false)
     const [show3,setShow3]=useState(false)
   return (
-    <div className='mx-[14%]'>
+    <div className='sm:mx-[14%] mx-4'>
         <div className='py-6'>
             <h1 className='font-semibold text-4xl'>Discover Recent Works</h1>
         </div>
         <div>
-            <ul className='flex gap-7 font-semibold text-gray-500 '>
+            <ul className='flex sm:gap-7 gap-2 font-semibold text-gray-500 '>
                 <li className='border-0 hover:border-b-2 hover:border-b-orange-400 hover:text-orange-400 cursor-pointer'>All</li>
                 <li className='border-0 hover:border-b-2 hover:border-b-orange-400 hover:text-orange-400 cursor-pointer'>Residential</li>
                 <li className='border-0 hover:border-b-2 hover:border-b-orange-400 hover:text-orange-400 cursor-pointer'>Commercial</li>
@@ -22,7 +22,7 @@ const Recentwork = () => {
                 <li className='border-0 hover:border-b-2 hover:border-b-orange-400 hover:text-orange-400 cursor-pointer'>Interior</li>
             </ul>
         </div>
-        <div className='grid grid-cols-3 gap-7 py-12'>
+        <div className='sm:grid grid-cols-3 gap-7 py-12'>
             <div className='relative ' onMouseEnter={()=>setShow(true)} onMouseLeave={()=>setShow(false)} >
                 <img src={img1} alt="" className='w-full h-auto '/>
                 <div className={`${show ? 'absolute bottom-0 left-0 w-full bg-black bg-opacity-50  p-4 h-full'  : 'hidden'} `}>

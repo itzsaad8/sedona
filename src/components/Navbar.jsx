@@ -4,6 +4,8 @@ import { AiOutlineTwitter } from "react-icons/ai";
 import { TiSocialFacebook } from "react-icons/ti";
 import { TfiYoutube } from "react-icons/tfi";
 import { IoLogoInstagram } from "react-icons/io";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { RxCross1 } from "react-icons/rx";
 
 const Navbar = () => {
     const [show,setShow]=useState(false)
@@ -12,10 +14,14 @@ const Navbar = () => {
     const [show3,setShow3]=useState(false)
     const [show4,setShow4]=useState(false)
 
+    const [nav,setNav]=useState(false)
+    
+
+   
 
     return (
-        <div className='mx-[40px]'>
-            <div className='py-6 flex justify-between items-center'>
+        <div className='sm:mx-[40px]'>
+            <div className='hidden relative sm:flex py-6  justify-between items-center'>
                 <div className='flex items-center gap-[65px]'>
                     <div>
                         <img src={logo} alt="" />
@@ -91,6 +97,28 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
+            <div className='flex justify-end text-3xl  sm:hidden'>
+                {nav ?
+                <RxCross1 onClick={()=>setNav(!nav)}/>
+                :
+               <RxHamburgerMenu onClick={()=>setNav(!nav)}/>             
+                }
+             
+            </div>
+            {
+                nav && 
+                <div className='absolute bg-black w-1/2 right-0 h-[80vh] text-white z-30'>
+                <ul className='text-center my-[50%]'>
+                  <li className='py-6'>Home</li>
+                  <li className='py-6'>Pages</li>
+                  <li className='py-6'>Work</li>
+                  <li className='py-6'>Features</li>
+                  <li className='py-6'>Blog</li>
+                </ul>
+             </div>
+
+            }
+            
         </div>
     )
 }

@@ -7,12 +7,12 @@ import { IoLogoInstagram } from "react-icons/io";
 
 const Footer = () => {
   return (
-    <div className='bg-black mb-8'>
-        <div className='flex justify-between text-white py-[75px] px-10 '>
+    <div className='bg-black sm:mb-8 mb-2'>
+        <div className='sm:flex justify-between text-white py-[75px] sm:px-10 px-4'>
             <div>
                 <img src={logo} alt="" />
             </div>
-            <div className='mr-16'>
+            <div className='mr-16 sm:py-0 py-10'>
                 <ul className='text-zinc-400   '>
                     <li>About</li>
                     <li className='py-2'>Service</li>
@@ -20,7 +20,7 @@ const Footer = () => {
                     <li>Contact</li>
                 </ul>
             </div>
-            <div className='mr-28'>
+            <div className='mr-28 sm:py-0 py-10'>
                 <ul className='text-zinc-400   '>
                     <li>Privacy Policy</li>
                     <li className='py-2'>Terms And Conditions</li>
@@ -28,13 +28,13 @@ const Footer = () => {
                 </ul>
             </div>
             <div>
-               <ul className='flex gap-8 ml-28 text-xl text-zinc-400'>
+               <ul className='flex gap-8 sm:ml-28 ml-20 text-xl text-zinc-400'>
                 <li><AiOutlineTwitter/></li>
                 <li><TiSocialFacebook/></li>
                 <li><TfiYoutube/></li>
                 <li><IoLogoInstagram/></li>
                </ul>
-               <p className='mt-44 text-zinc-400 ml-5 pb-6'>
+               <p className='sm:mt-44 mt-20 text-zinc-400 sm:ml-5 ml-10 pb-6'>
                   © 2018 Sedona, Made by DeoThemes
                </p>
             </div>
