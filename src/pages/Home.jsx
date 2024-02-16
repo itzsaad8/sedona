@@ -7,6 +7,8 @@ import { MdOutlineConstruction } from "react-icons/md";
 import img1 from '../assets/1.jpg'
 import Recentwork from '../components/Recentwork';
 import Testimonial from '../components/Testimonial';
+import News from '../components/News';
+import Footer from '../components/Footer';
 
 const Home = () => {
   return (
@@ -63,6 +65,8 @@ const Home = () => {
 
            <Recentwork/>
            <Testimonial/>
+           <News/>
+           <Footer/>
     </div>
   )
 }

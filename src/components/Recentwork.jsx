@@ -23,9 +23,9 @@ const Recentwork = () => {
             </ul>
         </div>
         <div className='grid grid-cols-3 gap-7 py-12'>
-            <div className='relative'>
-                <img onMouseEnter={()=>setShow(true)} onMouseLeave={()=>setShow(false)} src={img1} alt="" className='w-full h-auto '/>
-                <div className={`${show ? 'absolute bottom-0 left-0 w-full bg-black bg-opacity-100 p-4 h-full' : 'hidden'} `}>
+            <div className='relative ' onMouseEnter={()=>setShow(true)} onMouseLeave={()=>setShow(false)} >
+                <img src={img1} alt="" className='w-full h-auto '/>
+                <div className={`${show ? 'absolute bottom-0 left-0 w-full bg-black bg-opacity-50  p-4 h-full'  : 'hidden'} `}>
                     <div className='mt-[400px] ml-4 text-xl '>
                        <p className='text-white'>Text for Image 1</p>
                        <p className='text-white'>2018</p>
@@ -33,9 +33,9 @@ const Recentwork = () => {
                  
                  </div>
             </div>
-            <div className='relative'>
-                <img onMouseOver={()=>setShow1(true)} onMouseLeave={()=>setShow1(false)} src={img2} alt="" />
-                <div className={`${show1 ? 'absolute bottom-0 left-0 w-full bg-black bg-opacity-100 p-4 h-full' : 'hidden'} `}>
+            <div className='relative' onMouseOver={()=>setShow1(true)} onMouseLeave={()=>setShow1(false)} >
+                <img src={img2} alt="" />
+                <div className={`${show1 ? 'absolute bottom-0 left-0 w-full bg-black bg-opacity-50 p-4 h-full' : 'hidden'} `}>
                 <div className='mt-[400px] ml-4 text-xl '>
                        <p className='text-white'>Text for Image 1</p>
                        <p className='text-white'>2018</p>
@@ -43,19 +43,19 @@ const Recentwork = () => {
                  </div>
             </div>
             <div className='gap-5'>
-                <div className='relative'>
-                <img  onMouseOver={()=>setShow2(true)} onMouseLeave={()=>setShow2(false)} className='mb-7' src={img3} alt="" />
-                <div className={`${show2 ? 'absolute bottom-0 left-0 w-full bg-black bg-opacity-100 p-4 h-full' : 'hidden'} `}>
+                <div className='relative' onMouseOver={()=>setShow2(true)} onMouseLeave={()=>setShow2(false)}>
+                <img   className='mb-7' src={img3} alt="" />
+                <div className={`${show2 ? 'absolute bottom-0 left-0 w-full bg-black bg-opacity-50 p-4 h-full' : 'hidden'} `}>
                 <div className='mt-[150px] ml-4 text-xl '>
                        <p className='text-white'>Text for Image 1</p>
                        <p className='text-white'>2018</p>
                     </div>
                  </div>
                 </div>
-                <div className='relative'>
+                <div className='relative' onMouseOver={()=>setShow3(true)} onMouseLeave={()=>setShow3(false)} >
 
-                 <img onMouseOver={()=>setShow3(true)} onMouseLeave={()=>setShow3(false)}  src={img4} alt="" />
-                 <div className={`${show3 ? 'absolute bottom-0 left-0 w-full bg-black bg-opacity-100 p-4 h-full' : 'hidden'} `}>
+                 <img  src={img4} alt="" />
+                 <div className={`${show3 ? 'absolute  bottom-0 left-0 w-full bg-black bg-opacity-50 p-4 h-full' : 'hidden'} `}>
                 <div className='mt-[150px] ml-4 text-xl '>
                        <p className='text-white'>Text for Image 1</p>
                        <p className='text-white'>2018</p>
