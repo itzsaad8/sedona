@@ -20,7 +20,7 @@ const Navbar = () => {
     const [nav,setNav]=useState(false)
     
     const scrollnav = ()=>{
-        if(window.scrollY > 190){
+        if(window.scrollY > 120){
             setSticknav(true)
         }
         else{
@@ -39,7 +39,7 @@ const Navbar = () => {
 
     return (
         <div className={`${sticknav ? 'sm:mx-0':'sm:mx-[40px]'}`}>
-            <div className={`${sticknav ? 'z-10 fixed   w-[96.2%] px-3  transition-all duration-300   bg-black hidden  sm:flex text-white py-3  justify-between items-center ' : 'hidden  relative  sm:flex py-6  justify-between items-center ' }`}>
+            <div className={`${sticknav ? 'z-10 fixed   w-[96.2%] px-3  transition-all duration-700   bg-black hidden  sm:flex text-white py-3  justify-between items-center ' : 'hidden  relative  sm:flex py-6  justify-between items-center transition-all duration-300' }`}>
                 <div className='flex items-center gap-[65px]'>
                     <div>
                         {sticknav ? 
@@ -114,22 +114,28 @@ const Navbar = () => {
                             <li className='hover:text-blue-400'><AiOutlineTwitter /></li>
                             <li className='hover:text-blue-700'><TiSocialFacebook /></li>
                             <li className='hover:text-red-600'><TfiYoutube /></li>
-                            <li className='hover:text-red-500'><IoLogoInstagram /></li>
+                            <li className='hover:text-pink-500'><IoLogoInstagram /></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div className='flex justify-end text-3xl  sm:hidden'>
+            <div className=' text-3xl  sm:hidden mx-2 py-1'>
                 {nav ?
+                <div className='flex justify-between'>
+                <img width={70}  src={logo} alt=''/>
                 <RxCross1 onClick={()=>setNav(!nav)}/>
+                </div>
                 :
-               <RxHamburgerMenu onClick={()=>setNav(!nav)}/>             
+                <div className='flex justify-between'>
+                    <img width={70} src={logo}/>
+               <RxHamburgerMenu onClick={()=>setNav(!nav)}/>  
+               </div>           
                 }
              
             </div>
             {
                 nav && 
-                <div className='sm:hidden absolute bg-black w-1/2 right-0 h-[80vh] text-white z-30'>
+                <div className='sm:hidden absolute bg-black w-1/2 right-0 h-[80vh] text-white z-30 '>
                 <ul className='text-center my-[50%]'>
                   <li className='py-6'>Home</li>
                   <li className='py-6'>Pages</li>
