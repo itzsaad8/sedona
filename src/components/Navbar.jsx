@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState ,useEffect } from 'react'
 import logo from '../assets/logo.png'
+import logowhite from '../assets/logo_white.png'
 import { AiOutlineTwitter } from "react-icons/ai";
 import { TiSocialFacebook } from "react-icons/ti";
 import { TfiYoutube } from "react-icons/tfi";
@@ -14,23 +15,44 @@ const Navbar = () => {
     const [show3,setShow3]=useState(false)
     const [show4,setShow4]=useState(false)
 
+    const [sticknav,setSticknav]=useState(true)
+
     const [nav,setNav]=useState(false)
     
-
+    const scrollnav = ()=>{
+        if(window.scrollY > 190){
+            setSticknav(true)
+        }
+        else{
+            setSticknav(false)
+        }
+    }
+    useEffect(() => {
+        window.addEventListener('scroll', scrollnav);
+    
+        // Clean up the event listener on component unmount
+        return () => {
+          window.removeEventListener('scroll', scrollnav);
+        };
+      }, []); 
    
 
     return (
-        <div className='sm:mx-[40px]'>
-            <div className='hidden relative sm:flex py-6  justify-between items-center'>
+        <div className={`${sticknav ? 'sm:mx-0':'sm:mx-[40px]'}`}>
+            <div className={`${sticknav ? 'z-10 fixed   w-[96.2%] px-3  transition-all duration-300   bg-black hidden  sm:flex text-white py-3  justify-between items-center ' : 'hidden  relative  sm:flex py-6  justify-between items-center ' }`}>
                 <div className='flex items-center gap-[65px]'>
                     <div>
-                        <img src={logo} alt="" />
+                        {sticknav ? 
+                        <img src={logowhite}    alt=''/>
+                        :<img src={logo} alt="" />
+
+                        }
                     </div>
                     <div>
-                        <ul className='flex gap-[28px] font-[600] text-gray-700 cursor-pointer'>
+                        <ul className={`${sticknav ? 'flex gap-[28px] font-[600] text-white cursor-pointer' :'flex gap-[28px] font-[600] text-gray-700 cursor-pointer'}`}>
                             <li onMouseEnter={()=>setShow(true)} onMouseLeave={()=>setShow(false)} className='hover:text-orange-400 '>Home</li>
                             
-                            <div className={`${show ? 'absolute top-24 left-0 ml-[240px] z-10 bg-black text-white px-12 py-8' : 'hidden'}`}>
+                            <div className={`${show ? 'absolute top-24 left-0 ml-[175px] z-10 bg-black text-white px-12 py-8' : 'hidden'}`}>
 
                                     <ul className=''>
                                         <li>home</li>
@@ -107,7 +129,7 @@ const Navbar = () => {
             </div>
             {
                 nav && 
-                <div className='absolute bg-black w-1/2 right-0 h-[80vh] text-white z-30'>
+                <div className='sm:hidden absolute bg-black w-1/2 right-0 h-[80vh] text-white z-30'>
                 <ul className='text-center my-[50%]'>
                   <li className='py-6'>Home</li>
                   <li className='py-6'>Pages</li>
